@@ -85,14 +85,14 @@ const App = () => {
     };
     return (
         <div className="App">
-            <h1>Todo App</h1>
+            <h1>Todo app</h1>
             <input
                 type="text"
-                placeholder="Add a new todo"
+                placeholder="Add a new task"
                 value={newTodo}
                 onChange={(e) => setNewTodo(e.target.value)}
             />
-            <button onClick={addTodo}>Add Todo</button>
+            <button onClick={addTodo}>Add task</button>
             <ul>
                 {todos.map((todo) => (
                     <li key={todo.id}>
@@ -104,14 +104,14 @@ const App = () => {
                         <span
                             style={{
                                 textDecoration: todo.completed
-                                    ? 'line-through'
+                                    ? 'line-through solid blue 2px'
                                     : 'none',
                             }}
                         >
                             {todo.text}
                         </span>
                         <button onClick={() => deleteTodo(todo.id)}>
-                            Delete
+                            Delete task
                         </button>
                     </li>
                 ))}
