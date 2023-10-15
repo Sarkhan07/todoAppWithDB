@@ -52,6 +52,7 @@ const App = () => {
             console.error('Error adding todo: ', error);
         }
     };
+
     const toggleTodo = async (id) => {
         const updatedTodos = todos.map((todo) =>
             todo.id === id ? { ...todo, completed: !todo.completed } : todo
@@ -82,7 +83,6 @@ const App = () => {
             console.error('Error deleting todo: ', error);
         }
     };
-
     return (
         <div className="App">
             <h1>Todo App</h1>
